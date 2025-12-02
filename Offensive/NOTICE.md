@@ -1,7 +1,3 @@
-# ===============================================================
-#  PROJECT NOTICE – AI-GENERATED SNIPPETS & SECURITY REDACTIONS
-# ===============================================================
-
 This project contains multiple components built from **30–40 AI-generated
 code snippets**, which I reviewed, modified, and fully understood before
 including them here. The AI assistance served only as a development aid;
