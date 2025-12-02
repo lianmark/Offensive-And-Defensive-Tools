@@ -29,7 +29,7 @@ get_TargetInfo = TargetInfo(
     DCLHOST_OSTYPE,
     DCLHOST_CD
 )
-while True:  # ADD THIS OUTER LOOP FOR RECONNECTION
+while True: 
     try:
           ...
           ...
@@ -85,11 +85,11 @@ while True:  # ADD THIS OUTER LOOP FOR RECONNECTION
 
             time.sleep(0.05)
         s.close()
-    except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):  # CATCH SPECIFIC ERRORS
+    except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):  
         print("Connection lost with server. Reconnecting in 5 seconds...")
         s.close()
         time.sleep(5)
-        continue  # Go back to outer loop
+        continue 
     except Exception as e:
         print(f"Failed for reason: {e}. Reconnecting in 15 seconds...")
         try:
