@@ -1,7 +1,7 @@
 import socket
 import select
 import sys
-print("Lian Mark C2C server Version 0.0")
+print("Lian M C2C server Version 0.4")
 recv_data = "<ADMIN_AUTH_KEY>"
 recv_dataNONEADMIN = "NONEADMIN<ADMIN_AUTH_KEY>"
 admin_connected = False
