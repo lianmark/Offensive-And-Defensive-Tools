@@ -1,4 +1,4 @@
-This project contains multiple components built from **30–40 AI-generated
+This project contains multiple components built from **30–40% of the project AI-generated
 code snippets**, which I reviewed, modified, and fully understood before
 including them here. The AI assistance served only as a development aid;
 the design decisions, integrations, and final architecture are entirely
