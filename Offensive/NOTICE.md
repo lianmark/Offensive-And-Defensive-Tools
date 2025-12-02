@@ -1,7 +1,6 @@
 This project includes multiple components built using approximately 30–40%
 AI-generated code snippets, all of which I fully reviewed and understood
-before integrating.
-. The AI assistance served only as a development aid;
+before integrating. The AI assistance served only as a development aid;
 the design decisions, integrations, and final architecture are entirely
 my own.
 
