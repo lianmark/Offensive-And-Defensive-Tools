@@ -1,4 +1,5 @@
 # Added 12/28/2025 23:27
+# This project is unfinished and under active development(12/28/2025).
 # NOTE ON CONTRIBUTION & TRANSPARENCY
 # ~70% of this code was written and designed by me.
 # ~30% was assisted by ChatGPT in the form of small code snippets,
