@@ -1,0 +1,32 @@
+## this codes discover all devices in the LAN by simply sending arp request (who-is)  
+from scapy.all import *
+from scapy.layers.l2 import ARP, Ether
+import csv
+arp_table = {}
+oui = {}
+def get_oui():
+    with open('mac-vendors-export.csv', mode='r', encoding='utf-8', newline='')as file:
+        csvFile = csv.reader(file)
+        for lines in csvFile:
+            oui[lines[0].lower()] = lines[1]
+
+
+def get_lan_mac():
+    arp_request = Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst="<LAN NETWORK.DEFAULT_GATEWAY/SUBNET MASK>")
+    ans, noans = srp(arp_request, timeout=0.5, verbose=0)
+    for _, recv in ans:
+        found = False
+        for mac, vendor in oui.items():
+            lgthMac = len(mac)
+            tempMac = recv.hwsrc[0:lgthMac]
+            if tempMac == mac:
+                arp_table[recv.psrc] = ( recv.hwsrc, vendor)
+                found = True
+                break
+        if not found:
+            arp_table[recv.psrc] = ( recv.hwsrc, "UNKNOWN")
+
+get_oui()
+get_lan_mac()
+for key,value in arp_table.items():
+    print(f"IP {key}, MAC {value}")
