@@ -38,9 +38,9 @@ while True:
     threshold = 15
     different = 0 
     
-    # will only change pixel inn range of 15 which means every 15 pixels
+    # will only check pixel in range of 15 which means every 15 pixels
     for y in range(0, len(frame), 15):
-        # will only change pixel inn range of 15 which means every 15 pixels
+        # will only check pixel in range of 15 which means every 15 pixels
         for x in range(0, len(frame[y]), 15):
                 # if the threshold substraction of a pixel[x][y] from lastFrame - frame is greater than threshold variable = execute 
                 if abs(int(lastFrame[y][x]) - int(frame[y][x])) > threshold:
